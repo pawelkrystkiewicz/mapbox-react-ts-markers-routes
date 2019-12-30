@@ -1,0 +1,7 @@
+.form--code-block {
+	border-radius: 4px;
+	padding: 10px;
+	margin-left: 10px;
+	background: rgba(197, 197, 197, 0.5);
+	border: 1px solid rgba(197, 197, 197, 1);
+}
