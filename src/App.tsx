@@ -1,26 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Map } from './components/Map';
+import { GeoDataProvider, useGeoData } from './store/geo-data/geo-data';
+import { CodeDisplay } from './components/CodeDisplay';
+
+const Wrapper = (props: any) => <GeoDataProvider>{props.children}</GeoDataProvider>;
 
 const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+	return (
+		<Wrapper>
+			<div className="App">
+				<p>Map components display driven by React Context</p>
+				<div style={{ margin: 15 }}>
+					<Map />
+				</div>
+			</div>
+		</Wrapper>
+	);
+};
 
 export default App;
