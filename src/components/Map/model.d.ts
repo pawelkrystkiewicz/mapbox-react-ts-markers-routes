@@ -7,5 +7,6 @@ export interface IMapboxViewport {
 }
 
 export interface IMapState {
+	hasData: Boolean;
 	viewport: IMapboxViewport;
 }

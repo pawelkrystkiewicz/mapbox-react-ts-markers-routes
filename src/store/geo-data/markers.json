@@ -1,0 +1,71 @@
+{
+	"type": "FeatureCollection",
+	"features": [
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [ 16.9561, 52.3965 ]
+			},
+			"properties": {
+				"title": "1",
+				"icon": "monument"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [ 17.51926, 52.33123 ]
+			},
+			"properties": {
+				"title": "2",
+				"icon": "harbor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [ 18.70075, 50.97466 ]
+			},
+			"properties": {
+				"title": "3",
+				"icon": "harbor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [ 18.90267, 50.84899 ]
+			},
+			"properties": {
+				"title": "4",
+				"icon": "harbor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [ 19.1355, 50.80641 ]
+			},
+			"properties": {
+				"title": "5",
+				"icon": "harbor"
+			}
+		},
+		{
+			"type": "Feature",
+			"geometry": {
+				"type": "Point",
+				"coordinates": [ 19.1713, 50.73904 ]
+			},
+			"properties": {
+				"title": "6",
+				"icon": "harbor"
+			}
+		}
+	]
+}

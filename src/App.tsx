@@ -1,14 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Map } from './components/Map';
+import { GeoDataProvider, useGeoData } from './store/geo-data/geo-data';
+import { CodeDisplay } from './components/CodeDisplay';
+
+const Wrapper = (props: any) => <GeoDataProvider>{props.children}</GeoDataProvider>;
 
 const App: React.FC = () => {
 	return (
-		<div className="App">
-			{process.env.REACT_APP_MAPBOX_TOKEN}
-			<Map />
-		</div>
+		<Wrapper>
+			<div className="App">
+				<p>Map components display driven by React Context</p>
+				<div style={{ margin: 15 }}>
+					<Map />
+				</div>
+			</div>
+		</Wrapper>
 	);
 };
 
