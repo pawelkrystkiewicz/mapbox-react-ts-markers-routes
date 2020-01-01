@@ -1,5 +1,9 @@
-.App {
- display: flex;
-  flex-direction: column;
-  align-items: stretch;
+.app {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+}
+.app-title {
+	text-align: center;
+	font-weight: 700;
 }

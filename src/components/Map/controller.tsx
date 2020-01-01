@@ -1,19 +1,14 @@
-import MapGL, { Layer, Source, Marker } from '@urbica/react-map-gl';
+import MapGL, { Layer, Source } from '@urbica/react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import React, { useState } from 'react';
 import { useGeoData } from '../../store/geo-data/geo-data';
 import colors from '../../utils/colors';
+import { CodeDisplay } from '../CodeDisplay';
 import { IMapboxViewport, IMapState } from './model';
 import './style.scss';
-import { CodeDisplay } from '../CodeDisplay';
+
 const accessToken = process.env.REACT_APP_MAPBOX_TOKEN;
-const style = {
-	padding: '10px',
-	color: '#fff',
-	cursor: 'pointer',
-	background: '#1978c8',
-	borderRadius: '6px'
-};
+
 const initialState: IMapState = {
 	hasData: true,
 	viewport: {
@@ -38,7 +33,7 @@ export default () => {
 	const [ state, setState ] = useState(initialState);
 	const { data, getRouteById, getRouteMarkersById, resetGeoData } = useGeoData();
 
-	const route = data.route != null && [
+	const Route = data.route != null && [
 		<Source id="route" type="geojson" data={data.route} />,
 		<Layer
 			id="route"
@@ -54,7 +49,8 @@ export default () => {
 			}}
 		/>
 	];
-	const markers = data.markers != null && [
+
+	const Markers = data.markers != null && [
 		<Source id="markers" type="geojson" data={data.markers} />,
 		<Layer
 			id="markers"
@@ -72,7 +68,7 @@ export default () => {
 			}}
 		/>
 	];
-
+	console.log(`map render`);
 	return (
 		<React.Fragment>
 			<div style={{ marginBottom: 10, display: 'flex' }}>
@@ -114,9 +110,8 @@ export default () => {
 				}}
 				{...state.viewport}
 			>
-				{route}
-
-				{markers}
+				{Route}
+				{Markers}
 			</MapGL>
 			<br />
 			GeoData Provider State:
